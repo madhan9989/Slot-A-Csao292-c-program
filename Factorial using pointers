@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int n,f=1;
+int *pn,*pf;
+scanf("%d",&n);
+pn=&n;
+pf=&f;
+do
+{
+*pf=(*pn)*(*pf);
+*pn=*pn-1;
+}
+while(*pn>0);
+printf("the factorial is %d ",*pf);
+return 0;
+}
